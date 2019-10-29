@@ -18,4 +18,3 @@ tool fetches twitter feeds from the FictionFone account and saves in a mongo
 collection. Lastly, for our demo purpose, you will create a view that fetches tweets
 from mongoDB and shows in a table. Diagram below visualizes the process.
 Publish Message
-
