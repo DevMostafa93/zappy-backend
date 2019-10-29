@@ -25,7 +25,7 @@ mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useCreateIndex: tr
 
   slackEvents.on('message', (event) => {
     // console.log(`Received a message event: user ${event.user} in channel ${event.channel} says ${event.text}`);
-    if ((event.channel === process.env.CHANNEL_ID) && (event.text.includes(process.env.CONTAINING_MESSAGE.toLowerCase())))
+    if ((event.channel === process.env.CHANNEL_ID) && (event.text.toLowerCase().includes(process.env.CONTAINING_MESSAGE)))
       tweetService.saveTweets();
 
   });

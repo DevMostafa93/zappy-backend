@@ -88,7 +88,7 @@ async function getTweets(pageSize, pageNum, text, created_at_from, created_at_to
 
     let tweets = await TweetSchema.find(
         query
-    ).select('text created_at user').skip(skip).limit(pageSize);
+    ).select('text created_at user').skip(skip).limit(pageSize).sort({created_at:'descending'});
 
     let count = await TweetSchema.countDocuments(query);
     return pagingHelper.initializeResponse(tweets, count, pageSize);
