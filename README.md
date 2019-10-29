@@ -18,3 +18,13 @@ tool fetches twitter feeds from the FictionFone account and saves in a mongo
 collection. Lastly, for our demo purpose, you will create a view that fetches tweets
 from mongoDB and shows in a table. Diagram below visualizes the process.
 Publish Message
+
+To run this project
+
+1-create a Slack and Twitter account (if u not have)
+2-create app in developer.twitter (if u not have)
+3-create channel in slack (if u not have)
+4-create app on slack and put your domain/slack/events in Event Subscriptions and Subscribe to workspace events
+5-open the .env and add your data 
+6-npm i 
+7-node server.js
