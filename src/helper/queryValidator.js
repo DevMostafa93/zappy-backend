@@ -56,11 +56,7 @@ class queryValidator {
         return ObjectId.isValid(!value ? value : value.toString());
     }
     static isDate(value) {
-        try {
-            return !isNaN(Date.parse(value));
-        } catch (error) {
-            return false;
-        }
+        return !isNaN(Date.parse(value));
     }
 }
 
